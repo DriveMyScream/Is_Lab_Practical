@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+string chat(string input)
+{
+	string response;
+	if(input=="hii"){
+		response="hello";
+	}else if(input=="how are you?"){
+		response="i am fine";
+	}else if(input=="bye"){
+		response="goodbye";
+	}
+	else{
+		response="i am not understand,sorry!!";
+	}
+	return response;	
+	}
+	int main()
+	{
+		cout<<"\n how can i assist you";
+		while(true){
+			cout<<">";
+			string input;
+			getline(cin,input);
+			string response=chat(input);
+			cout<<"Bot :"<<response<<endl;
+			if(response=="goodbye"){
+				break;	
+			}
+		}
+		 return 0;
+	}
+	
+
